@@ -44,11 +44,11 @@
         <div class="mt-2 flex justify-normal gap-3">
 
             <label for="new_student">
-                <input type="radio" name="student_type" id="new_student" value="is_new" checked>
+                <input type="radio" name="is_transferee" id="new_student" value="0" checked required>
                 New Student
             </label>
             <label for="transferee">
-                <input type="radio" name="student_type" id="transferee" value="is_transfer">
+                <input type="radio" name="is_transferee" id="transferee" value="1" required>
                 Transferee
             </label>
         </div>
