@@ -39,6 +39,20 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
+        <!-- New or Transferee -->
+        <x-input-label for="" :value="__('Student Type')" class="mt-4" />
+        <div class="mt-2 flex justify-normal gap-3">
+
+            <label for="new_student">
+                <input type="radio" name="student_type" id="new_student" value="is_new" checked>
+                New Student
+            </label>
+            <label for="transferee">
+                <input type="radio" name="student_type" id="transferee" value="is_transfer">
+                Transferee
+            </label>
+        </div>
+
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
