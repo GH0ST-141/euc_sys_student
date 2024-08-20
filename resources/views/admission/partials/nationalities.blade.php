@@ -1,5 +1,5 @@
 <label class="input-label" for="nationality">Nationality</label>
-<select name="nationality" class="input-field-d" required>
+<select name="citizenship" id="nationality" class="input-field-d" required>
     <option value="" disabled selected>Nationality</option>
     <option value="afghan">Afghan</option>
     <option value="albanian">Albanian</option>
