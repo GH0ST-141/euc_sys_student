@@ -15,11 +15,12 @@ return new class extends Migration
         // circular dependency problem when migrating.
 
         Schema::table('student_info', function (Blueprint $table) {
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
         });
 
+        // FIXME: this foreign key (student_info_id) should be nullable()
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('student_info_id')->references('id')->on('student_info');
+            $table->foreignId('student_info_id')->references('id')->on('student_info')->onDelete('cascade');
         });
     }
 

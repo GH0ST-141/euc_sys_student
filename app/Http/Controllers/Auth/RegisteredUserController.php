@@ -31,7 +31,7 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'is_transferee' => 'required|in:0,1'
         ]);
@@ -47,7 +47,14 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
+        // REVIEW: route to appropriate admission form (new and transferee)
+        if ($request->is_transferee == 0) {
+            return redirect(route('admission_new', absolute: false));
+        } else {
+            return redirect(route('admission_transferee', absolute: false));
+        }
+
         // TODO: redirect to admission form for new or transferee (depending on the radio button value)
-        return redirect(route('dashboard', absolute: false));
+        // return redirect(route('dashboard', absolute: false));
     }
 }

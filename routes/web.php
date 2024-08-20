@@ -11,9 +11,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Route::get('/register_type', function () {
-//     return view('admission.student_type_prompt');
-// });
+Route::get('/admission_new', function () {
+    return view('admission.admission_new');
+})->middleware(['auth', 'verified'])->name('admission_new');
+
+// TODO: create routing for admission transferee
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
