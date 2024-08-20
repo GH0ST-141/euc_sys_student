@@ -9,6 +9,13 @@ export default {
         './resources/views/**/*.blade.php',
     ],
 
+    prefix: "tw-",
+    important: true,
+    corePlugins: {
+        preflight: false,
+    },
+
+
     theme: {
         extend: {
             fontFamily: {

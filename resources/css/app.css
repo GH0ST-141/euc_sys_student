@@ -1,3 +1,116 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+#topbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #940000;
+    height: 4rem;
+    width: 100%;
+}
+
+#euc-logo {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 0.4rem;
+    margin-left: 1rem;
+}
+
+#topbar-title {
+    /* border: 1px cyan dashed; */
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.856);
+}
+
+#content-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#content-title {
+    color: #940000cc;
+    margin-bottom: 0;
+}
+
+#content-subtitle {
+    margin-top: 0;
+    font-size: small;
+    border: 1px green dashed;
+    padding: 0.5rem;
+    padding-left: 1.6rem;
+    padding-right: 1rem;
+    border-radius: 0.3rem;
+    color: green;
+}
+
+#form-title {
+    margin-top: 1rem;
+}
+
+.admission-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 1rem; */
+    margin-top: 0.5rem;
+}
+
+.input-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(29, 29, 29, 0.877);
+    align-self: flex-start;
+    margin-left: 0.3rem;
+}
+
+.input-field {
+    width: 75vw;
+    height: 2rem;
+    border-radius: 0.4rem;
+    border: 2px gray solid;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* Dropdown input */
+.input-field-d {
+    width: 75vw;
+    /* height: 2rem; */
+    border-radius: 0.4rem;
+    border: 2px gray solid;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+
+}
+
+#submit-btn {
+    margin-top: 1rem;
+    width: 20vw;
+    height: 2rem;
+    background-color: #940000;
+    color: white;
+    font-weight: 700;
+    border-radius: 0.4rem;
+    border: none;
+}
+
+#submit-btn:hover {
+    background-color: goldenrod;
+}
+
+@media screen and (max-width: 480px) {
+    #submit-btn {
+        width: 65vw;
+    }
+}
