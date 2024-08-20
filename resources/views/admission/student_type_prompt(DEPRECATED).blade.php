@@ -19,11 +19,6 @@
         <div id="content">
             <h4 id="content-prompt">Admission for?</h4>
             <div id="student-type-btn">
-                {{--
-                    // TODO: Redirect to the registration then turn on flag appropriately
-                    // if new student, is_transferee in DB is 0, else 1
-                    // OR just include the choice in the registration
-                --}}
                 <button class="stud-choice-btn" type="button"
                     onclick="location.href='./admission_new/admission_new.html'">New Student</button>
                 <button class="stud-choice-btn" type="button">Transferee</button>

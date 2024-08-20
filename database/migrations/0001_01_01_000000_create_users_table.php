@@ -17,6 +17,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            // REVIEW: I added these
+            $table->tinyInteger('filled_admission')->default(0);
+            $table->tinyInteger('is_enrolled')->default(0);
+            $table->tinyInteger('is_transferee')->default(0);
+            // REVIEW:! I added these
             $table->rememberToken();
             $table->timestamps();
         });

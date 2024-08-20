@@ -47,6 +47,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
+        // TODO: redirect to admission form for new or transferee (depending on the radio button value)
         return redirect(route('dashboard', absolute: false));
     }
 }
