@@ -28,6 +28,11 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
+        // TODO: Redirect to admission form when it is not yet filled
+        // if ($request->filled_admission == 0) {
+        //     return redirect()->intended(route('admission_new', absolute: false));
+        // }
+
         return redirect()->intended(route('dashboard', absolute: false));
     }
 

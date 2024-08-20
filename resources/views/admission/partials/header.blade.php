@@ -1,0 +1,7 @@
+<div id="content">
+    <div id="content-header">
+        <h2 id="content-title">Admission Form</h2>
+        <p id="content-subtitle">
+            Please fill up the required field accurately. Thank you!
+        </p>
+    </div>
