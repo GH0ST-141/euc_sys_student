@@ -28,13 +28,14 @@ return new class extends Migration
             $table->string('civil_status');
             $table->integer('cell_no');
             $table->string('email');
-            $table->string('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->foreignUuid('course_id')->references('id')->on('courses');
             $table->foreignId('family_bg_id')->references('id')->on('family_bg')->onDelete('cascade');
             $table->foreignId('educ_bg_id')->references('id')->on('educ_bg')->onDelete('cascade');
             $table->foreignId('creds_id')->references('id')->on('credentials')->onDelete('cascade');
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
