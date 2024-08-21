@@ -35,12 +35,15 @@
 }
 
 #content-title {
+    font-size: 2rem;
+    font-weight: bold;
     color: #940000cc;
     margin-bottom: 0;
 }
 
 #content-subtitle {
     margin-top: 0;
+    margin-bottom: 2rem;
     font-size: small;
     border: 1px green dashed;
     padding: 0.5rem;

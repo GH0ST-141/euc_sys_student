@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MSEUFCI Admission</title>
     {{-- <link rel="stylesheet" href="{{ asset('build/assets/admission_new.css') }}" /> --}}
-    <link rel="stylesheet" href="{{ asset('build/assets/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/assets/accordion.css') }}">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -21,10 +21,12 @@
         <div>
             @include('admission.partials.header')
 
+            {{-- //TODO: Add action to this form --}}
             {{-- <h3 id="form-title">Student Information</h3> --}}
             <form class="admission-form" method="POST" action="">
+                @csrf
 
-                <div class="accordion" id="admission-new-accordion">
+                {{-- <div class="accordion" id="admission-new-accordion">
 
                     @include('admission.partials.accordion.student_info')
 
@@ -34,19 +36,39 @@
 
                     @include('admission.partials.accordion.credentials')
 
+                </div> --}}
+
+                <div>
+
+                    <button class="accordion">Student Info</button>
+                    <div class="panel">
+                        @include('admission.partials.accordion.student_info')
+                    </div>
+
+                    <button class="accordion">Family Background</button>
+                    <div class="panel">
+                        @include('admission.partials.accordion.family_bg')
+                    </div>
+
+                    <button class="accordion">Educational Background</button>
+                    <div class="panel">
+                        @include('admission.partials.accordion.educational_bg')
+                    </div>
+
+                    <button class="accordion">Credentials</button>
+                    <div class="panel">
+                        @include('admission.partials.accordion.credentials')
+                    </div>
+
                 </div>
 
+                <button id="submit-btn" type="submit" class="mb-8">Proceed</button>
 
-                <button id="submit-btn" type="submit">Proceed</button>
-
-                <!-- <section id="student-info-section"></section>
-            <section id="family-bg-section"></section>
-            <section id="educ-bg-section"></section>
-            <section id="requirements-section"></section> -->
             </form>
         </div>
     </main>
-    <script src="{{ asset('build/assets/bootstrap.min.js') }}"></script>
+
+    <script src="{{ asset('build/assets/accordion.js') }}"></script>
 </body>
 
 </html>

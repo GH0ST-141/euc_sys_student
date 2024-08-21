@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('shs_grad_yr');
             $table->string('prev_univ');
             $table->string('prev_univ_grad_yr');
+            $table->foreignId('student_id')->references('id')->on('student_info')->onDelete('cascade');
             $table->timestamps();
         });
     }

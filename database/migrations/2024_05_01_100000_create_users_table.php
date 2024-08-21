@@ -21,7 +21,6 @@ return new class extends Migration
             $table->tinyInteger('filled_admission')->default(0);
             $table->tinyInteger('is_enrolled')->default(0);
             $table->tinyInteger('is_transferee')->default(0);
-            // $table->foreignId('student_info_id')->references('id')->on('student_info');
             // REVIEW:! I added these
             $table->rememberToken();
             $table->timestamps();

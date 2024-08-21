@@ -29,9 +29,7 @@ return new class extends Migration
             $table->integer('cell_no');
             $table->string('email');
             $table->foreignUuid('course_id')->references('id')->on('courses');
-            $table->foreignId('family_bg_id')->references('id')->on('family_bg')->onDelete('cascade');
-            $table->foreignId('educ_bg_id')->references('id')->on('educ_bg')->onDelete('cascade');
-            $table->foreignId('creds_id')->references('id')->on('credentials')->onDelete('cascade');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

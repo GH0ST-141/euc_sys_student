@@ -5,9 +5,9 @@
             Credentials Uploads
         </button>
     </h2>
-    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+    <div id="collapseFour" class="bs-accordion-collapse bs-collapse" aria-labelledby="headingFour"
         data-bs-parent="#admission-new-accordion">
-        <div class="accordion-body">
+        <div class="bs-accordion-body">
             {{-- //TODO CONTENT HERE --}}
         </div>
     </div>

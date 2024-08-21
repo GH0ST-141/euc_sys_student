@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('guardian');
             $table->string('guardian_address');
             $table->integer('guardian_cell_no');
+            $table->foreignId('student_id')->references('id')->on('student_info')->onDelete('cascade');
             $table->timestamps();
         });
     }

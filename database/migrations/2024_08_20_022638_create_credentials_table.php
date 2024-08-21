@@ -21,6 +21,7 @@ return new class extends Migration
             $table->binary('phys_test_res')->nullable();
             $table->binary('tor')->nullable();
             $table->binary('transfer_cred')->nullable();
+            $table->foreignId('student_id')->references('id')->on('student_info')->onDelete('cascade');
             $table->timestamps();
         });
     }

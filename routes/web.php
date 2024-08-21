@@ -11,9 +11,22 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/admission_new', function () {
-    return view('admission.admission_new');
-})->middleware(['auth', 'verified'])->name('admission_new');
+// Route::get('/admission_new', function () {
+//     return view('admission.admission_new');
+// })->middleware(['auth', 'verified'])->name('admission_new');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/admission_new', function () {
+        return view('admission.admission_new');
+    })->name('admission_new');
+
+    Route::post('/admission_new', function () {
+        return view('admission.admission_new'); // TODO: Change this function to post func
+    })->name('admission_new');
+});
+
+
+
 
 // TODO: create routing for admission transferee
 
@@ -23,4 +36,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

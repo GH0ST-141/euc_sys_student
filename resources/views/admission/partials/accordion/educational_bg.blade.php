@@ -5,9 +5,9 @@
             Educational Background
         </button>
     </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+    <div id="collapseThree" class="bs-accordion-collapse bs-collapse" aria-labelledby="headingThree"
         data-bs-parent="#admission-new-accordion">
-        <div class="accordion-body">
+        <div class="bs-accordion-body">
             {{-- //TODO CONTENT HERE --}}
         </div>
     </div>
