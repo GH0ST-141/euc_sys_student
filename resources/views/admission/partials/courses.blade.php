@@ -9,7 +9,34 @@
         Bachelor of Science in Computer Engineering
     </option>
     <option value="BSN">Bachelor of Science in Nursing</option>
-    <option value="BSBA">
-        Bachelor of Science in Business Administration
+    <option value="BSA">
+        Bachelor of Science in Accountancy
+    </option>
+    <option value="BSEE">
+        Bachelor of Secondary Education Major in English
+    </option>
+    <option value="BSEM">
+        Bachelor of Secondary Education Major in Mathematics
+    </option>
+    <option value="BSES">
+        Bachelor of Secondary Education Major in Science
+    </option>
+    <option value="BSESS">
+        Bachelor of Secondary Education Major in Social Studies
+    </option>
+    <option value="BSEF">
+        Bachelor of Secondary Education Major in Filipino
+    </option>
+    <option value="BSELEM">
+        Bachelor of Elementary Education
+    </option>
+    <option value="BAP">
+        Bachelor of Arts in Psychology
+    </option>
+    <option value="BSHM">
+        Bachelor of Science in Hospitality Management
+    </option>
+    <option value="BSTM">
+        Bachelor of Science in Tourism Management
     </option>
 </select>
