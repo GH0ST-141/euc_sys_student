@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('student_info', function (Blueprint $table) {
             $table->id();
+            // Basic Info
             $table->string('first_name');
             $table->string('middle_name');
             $table->string('last_name');
@@ -29,6 +30,38 @@ return new class extends Migration
             $table->string('civil_status');
             $table->integer('cell_no');
             $table->string('email');
+            // Family BG
+            $table->string('father');
+            $table->string('father_address');
+            $table->integer('father_cell_no');
+            $table->string('mother');
+            $table->string('mother_address');
+            $table->integer('mother_cell_no');
+            $table->string('guardian');
+            $table->string('guardian_address');
+            $table->integer('guardian_cell_no');
+            // Educ BG
+            $table->string('elem');
+            $table->string('elem_address');
+            $table->string('elem_grad_yr');
+            $table->string('jhs');
+            $table->string('jhs_address');
+            $table->string('jhs_grad_yr');
+            $table->string('shs');
+            $table->string('shs_address');
+            $table->string('shs_grad_yr');
+            $table->string('prev_univ');
+            $table->string('prev_univ_grad_yr');
+            // Credentials
+            $table->binary('shs_hs_card')->nullable();
+            $table->binary('good_moral')->nullable();
+            $table->binary('birth_cert')->nullable();
+            $table->binary('2x2_pic')->nullable();
+            $table->binary('entrance_exam_res')->nullable();
+            $table->binary('phys_test_res')->nullable();
+            $table->binary('tor')->nullable();
+            $table->binary('transfer_cred')->nullable();
+            // Course and foreign keys
             $table->foreignUuid('course_id')->references('id')->on('courses');
             $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();

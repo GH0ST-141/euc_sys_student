@@ -24,26 +24,6 @@
 
     @include('admission.partials.courses')
 
-    <!-- TODO Separate address to street,brgy,municipality,province, convert to dropdown w/ predetermined address -->
-    {{-- <label class="input-label" for="address"> Address </label>
-                <input class="input-field" type="text" name="address" id="address"
-                    placeholder="Enter full address" required /> --}}
-
-
-    {{-- <label class="input-label" for="street"> Street </label>
-    <input class="input-field" type="text" name="street" id="street" placeholder="Enter street" required />
-
-    <label class="input-label" for="brgy"> Barangay </label>
-    <input class="input-field" type="text" name="brgy" id="brgy" placeholder="Enter barangay" required />
-
-    <label class="input-label" for="municipality"> Municipality/Town </label>
-    <input class="input-field" type="text" name="municipality" id="municipality" placeholder="Enter municipality"
-        required />
-
-    <label class="input-label" for="province"> Province/City </label>
-    <input class="input-field" type="text" name="province" id="province" placeholder="Enter province" required /> --}}
-
-
     {{-- ADDRESS SELECTOR --}}
     <div class="flex flex-col mb-3 col-sm-6">
         <label class="form-label input-label">Region</label>

@@ -25,7 +25,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('admission_new');
 });
 
-// REVIEW: For address selector
+// REVIEW: For address selector, route to json file to access it
 Route::middleware('auth')->group(function () {
     Route::get('/ph-json/region.json', function () {
         return response()->file('build/assets/ph-json/region.json');
