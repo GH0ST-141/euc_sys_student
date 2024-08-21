@@ -25,7 +25,21 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('admission_new');
 });
 
-
+// REVIEW: For address selector
+Route::middleware('auth')->group(function () {
+    Route::get('/ph-json/region.json', function () {
+        return response()->file('build/assets/ph-json/region.json');
+    });
+    Route::get('/ph-json/province.json', function () {
+        return response()->file('build/assets/ph-json/province.json');
+    });
+    Route::get('/ph-json/city.json', function () {
+        return response()->file('build/assets/ph-json/city.json');
+    });
+    Route::get('/ph-json/barangay.json', function () {
+        return response()->file('build/assets/ph-json/barangay.json');
+    });
+});
 
 
 // TODO: create routing for admission transferee

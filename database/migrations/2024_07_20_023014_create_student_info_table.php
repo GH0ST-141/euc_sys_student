@@ -17,9 +17,10 @@ return new class extends Migration
             $table->string('middle_name');
             $table->string('last_name');
             $table->string('street');
-            $table->string('brgy');
-            $table->string('municipality');
+            $table->string('barangay');
+            $table->string('city');
             $table->string('province');
+            $table->string('region');
             $table->date('birth_date');
             $table->string('birth_place');
             $table->string('citizenship');

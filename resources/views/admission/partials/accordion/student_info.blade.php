@@ -30,7 +30,7 @@
                     placeholder="Enter full address" required /> --}}
 
 
-    <label class="input-label" for="street"> Street </label>
+    {{-- <label class="input-label" for="street"> Street </label>
     <input class="input-field" type="text" name="street" id="street" placeholder="Enter street" required />
 
     <label class="input-label" for="brgy"> Barangay </label>
@@ -41,7 +41,44 @@
         required />
 
     <label class="input-label" for="province"> Province/City </label>
-    <input class="input-field" type="text" name="province" id="province" placeholder="Enter province" required />
+    <input class="input-field" type="text" name="province" id="province" placeholder="Enter province" required /> --}}
+
+
+    {{-- ADDRESS SELECTOR --}}
+    <div class="col-sm-6">
+        <h3>Address Selector - Philippines</h3>
+    </div>
+    <hr>
+    <div class="mb-3 col-sm-6">
+        <label class="form-label">Region *</label>
+        <select name="region" class="form-control form-control-md" id="region"></select>
+        <input type="hidden" class="form-control form-control-md" name="region_text" id="region-text" required>
+    </div>
+    <div class="mb-3 col-sm-6">
+        <label class="form-label">Province *</label>
+        <select name="province" class="form-control form-control-md" id="province"></select>
+        <input type="hidden" class="form-control form-control-md" name="province_text" id="province-text" required>
+    </div>
+    <div class="mb-3 col-sm-6">
+        <label class="form-label">City / Municipality *</label>
+        <select name="city" class="form-control form-control-md" id="city"></select>
+        <input type="hidden" class="form-control form-control-md" name="city_text" id="city-text" required>
+    </div>
+    <div class="mb-3 col-sm-6">
+        <label class="form-label">Barangay *</label>
+        <select name="barangay" class="form-control form-control-md" id="barangay"></select>
+        <input type="hidden" class="form-control form-control-md" name="barangay_text" id="barangay-text" required>
+    </div>
+    <div class="mb-3 col-md-6">
+        <label for="street-text" class="form-label">Street (Optional)</label>
+        <input type="text" class="form-control form-control-md" name="street" id="street-text">
+    </div>
+    <div class="col-md-6">
+        <input type="submit" class="btn btn-success" name="submit">
+    </div>
+    {{-- !ADDRESS SELECTOR --}}
+
+
 
     <label class="input-label" for="birthdate">
         Birthdate (Press the Calendar Icon) </label>

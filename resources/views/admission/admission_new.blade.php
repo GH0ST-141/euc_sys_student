@@ -8,6 +8,8 @@
     {{-- <link rel="stylesheet" href="{{ asset('build/assets/admission_new.css') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('build/assets/accordion.css') }}">
 
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -25,18 +27,6 @@
             {{-- <h3 id="form-title">Student Information</h3> --}}
             <form class="admission-form" method="POST" action="">
                 @csrf
-
-                {{-- <div class="accordion" id="admission-new-accordion">
-
-                    @include('admission.partials.accordion.student_info')
-
-                    @include('admission.partials.accordion.family_bg')
-
-                    @include('admission.partials.accordion.educational_bg')
-
-                    @include('admission.partials.accordion.credentials')
-
-                </div> --}}
 
                 <div>
 
@@ -69,6 +59,8 @@
     </main>
 
     <script src="{{ asset('build/assets/accordion.js') }}"></script>
+    <script src="{{ asset('build/assets/jquery.min.js') }}"></script>
+    <script src="{{ asset('build/assets/ph-address-selector.js') }}"></script>
 </body>
 
 </html>
