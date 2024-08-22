@@ -67,7 +67,9 @@ class StudentInfoNewController extends Controller
             'phys_test_res' => ['nullable','image','size:8024'],
         ]);
 
-        return to_route('dashboard');
+        // return to_route('dashboard'); // TODO: redirect to this
+        return to_route('test'); // REVIEW: test only
+
     }
 
     /**

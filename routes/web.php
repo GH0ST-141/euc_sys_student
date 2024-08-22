@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admission\StudentInfoNewController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,24 +12,17 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Route::get('/admission_new', function () {
-//     return view('admission.admission_new');
-// })->middleware(['auth', 'verified'])->name('admission_new');
-
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/admission_new', function () {
         return view('admission.admission_new');
     })->name('admission_new');
 
-    // TODO: Replace with /admission_new
-    Route::post('/test', function () {
-        // return view('admission.admission_new');
-        return dd($_POST);
-    })->name('admission_new');
+    Route::post('/admission_new', [StudentInfoNewController::class,'store'])->name('admission_new.store');
 
-    Route::post('/admission_new', function () {
-        return view('admission.admission_new'); // TODO: Change this function to post func
-    })->name('admission_new');
+    // REVIEW: For testing
+    Route::get('/test',function () {
+        return view('test');
+    })->name('test');
 });
 
 // REVIEW: For address selector, route to json file to access it
