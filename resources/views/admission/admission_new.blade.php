@@ -7,6 +7,7 @@
     <title>MSEUFCI Admission</title>
     {{-- <link rel="stylesheet" href="{{ asset('build/assets/admission_new.css') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('build/assets/accordion.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/assets/yearpicker.css') }}">
 
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
 
@@ -61,6 +62,14 @@
     <script src="{{ asset('build/assets/accordion.js') }}"></script>
     <script src="{{ asset('build/assets/jquery.min.js') }}"></script>
     <script src="{{ asset('build/assets/ph-address-selector.js') }}"></script>
+
+    {{-- For year picker --}}
+    {{-- https://www.jqueryscript.net/time-clock/Year-Picker-Text-Input.html --}}
+    <script src="{{ asset('build/assets/yearpicker.js') }}"></script>
+    <script>
+        $('.yearpicker').yearpicker()
+    </script>
+
 </body>
 
 </html>
