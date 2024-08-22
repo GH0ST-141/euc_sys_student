@@ -40,6 +40,25 @@ class StudentInfoNewController extends Controller
             'civil_status' => ['required', Rule::in(['single','married','widowed','divorced'])],
             'cell_no' => ['required','digits:11','integer','numeric'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255'],
+            'father' => ['required','string','max:255'],
+            'father_address' => ['required','string','max:255'],
+            'father_cell_no' => ['required','digits:11','integer','numeric'],
+            'mother' => ['required','string','max:255'],
+            'mother_address' => ['required','string','max:255'],
+            'mother_cell_no' => ['required','digits:11','integer','numeric'],
+            'guardian' => ['required','string','max:255'],
+            'guardian_address' => ['required','string','max:255'],
+            'guardian_cell_no' => ['required','digits:11','integer','numeric'],
+            'elem' => ['required','string','min:8','max:255'],
+            'elem_address' => ['required','string','max:255'],
+            'elem_grad_yr' => ['required','digits:4','integer','numeric'],
+            'jhs' => ['required','string','min:8','max:255'],
+            'jhs_address' => ['required','string','max:255'],
+            'jhs_grad_yr' => ['required','digits:4','integer','numeric'],
+            'shs' => ['required','string','min:8','max:255'],
+            'shs_address' => ['required','string','max:255'],
+            'shs_grad_yr' => ['required','digits:4','integer','numeric'],
+
         ]);
 
         return to_route('dashboard');
