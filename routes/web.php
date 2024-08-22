@@ -20,6 +20,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('admission.admission_new');
     })->name('admission_new');
 
+    // TODO: Replace with /admission_new
+    Route::post('/test', function () {
+        // return view('admission.admission_new');
+        return dd($_POST);
+    })->name('admission_new');
+
     Route::post('/admission_new', function () {
         return view('admission.admission_new'); // TODO: Change this function to post func
     })->name('admission_new');
