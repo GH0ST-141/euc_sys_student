@@ -58,7 +58,13 @@ class StudentInfoNewController extends Controller
             'shs' => ['required','string','min:8','max:255'],
             'shs_address' => ['required','string','max:255'],
             'shs_grad_yr' => ['required','digits:4','integer','numeric'],
-
+            // REVIEW: Max 8000kb or 8mb image size
+            'shs_hs_card' => ['nullable','image','size:8024'],
+            'good_moral' => ['nullable','image','size:8024'],
+            'birth_cert' => ['nullable','image','size:8024'],
+            '2x2_pic' => ['nullable','image','size:8024'],
+            'entrance_exam_res' => ['nullable','image','size:8024'],
+            'phys_test_res' => ['nullable','image','size:8024'],
         ]);
 
         return to_route('dashboard');
