@@ -6,3 +6,4 @@
     <option value="widowed">Widowed</option>
     <option value="divorced">Divorced</option>
 </select>
+<x-input-error :messages="$errors->get('civil_status')" class="-mt-3 mb-2" />

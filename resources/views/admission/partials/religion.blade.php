@@ -14,3 +14,4 @@
     <option value="inc">Church of Christ</option>
     <option value="inc">Others</option>
 </select>
+<x-input-error :messages="$errors->get('religion')" class="-mt-3 mb-2" />

@@ -39,7 +39,7 @@ class StudentInfoNewController extends Controller
             'gender' => ['required', Rule::in(['male','female','others'])],
             'civil_status' => ['required', Rule::in(['single','married','widowed','divorced'])],
             'cell_no' => ['required','digits:11','integer','numeric'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email:filter', 'max:255'],
             'father' => ['required','string','max:255'],
             'father_address' => ['required','string','max:255'],
             'father_cell_no' => ['required','digits:11','integer','numeric'],
@@ -59,12 +59,12 @@ class StudentInfoNewController extends Controller
             'shs_address' => ['required','string','max:255'],
             'shs_grad_yr' => ['required','digits:4','integer','numeric'],
             // REVIEW: Max 8000kb or 8mb image size
-            'shs_hs_card' => ['nullable','image','size:8024'],
-            'good_moral' => ['nullable','image','size:8024'],
-            'birth_cert' => ['nullable','image','size:8024'],
-            '2x2_pic' => ['nullable','image','size:8024'],
-            'entrance_exam_res' => ['nullable','image','size:8024'],
-            'phys_test_res' => ['nullable','image','size:8024'],
+            'shs_hs_card' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
+            'good_moral' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
+            'birth_cert' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
+            '2x2_pic' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
+            'entrance_exam_res' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
+            'phys_test_res' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
         ]);
 
         // return to_route('dashboard'); // TODO: redirect to this

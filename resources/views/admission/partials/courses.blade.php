@@ -40,3 +40,4 @@
         Bachelor of Science in Tourism Management
     </option>
 </select>
+<x-input-error :messages="$errors->get('course_id')" class="-mt-3 mb-2" />

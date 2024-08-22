@@ -5,3 +5,4 @@
     <option value="female">Female</option>
     <option value="others">Others</option>
 </select>
+<x-input-error :messages="$errors->get('gender')" class="-mt-3 mb-2" />

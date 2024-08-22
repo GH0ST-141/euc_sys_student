@@ -23,7 +23,7 @@
 
             {{-- //TODO: Add action to this form --}}
             {{-- <h3 id="form-title">Student Information</h3> --}}
-            <form class="admission-form" method="POST" action="{{ route('admission_new.store') }}">
+            <form class="admission-form" method="POST" action="{{ route('admission_new.store') }}" enctype="multipart/form-data">
                 @csrf
 
                 <div>

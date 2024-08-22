@@ -194,3 +194,4 @@
     <option value="zambian">Zambian</option>
     <option value="zimbabwean">Zimbabwean</option>
 </select>
+<x-input-error :messages="$errors->get('citizenship')" class="-mt-3 mb-2" />
