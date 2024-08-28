@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admission;
 
 use App\Http\Controllers\Controller;
+use App\Models\StudentInfo;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -62,14 +63,62 @@ class StudentInfoNewController extends Controller
             'shs_hs_card' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
             'good_moral' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
             'birth_cert' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
-            '2x2_pic' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
+            'pic_2x2' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
             'entrance_exam_res' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
             'phys_test_res' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
         ]);
 
-        // return to_route('dashboard'); // TODO: redirect to this
-        return to_route('test'); // REVIEW: test only
+        // FIXME: The image credentials doesn't work, 'must be an image'
+        // added enctype already
+        $student_info = StudentInfo::create([
+            'last_name' => $request->last_name,
+            'first_name' => $request->first_name,
+            'middle_name' => $request->middle_name,
+            'course_id' => $request->course_id,
+            'region' => $request->region,
+            'province' => $request->province,
+            'city' => $request->city,
+            'barangay' => $request->barangay,
+            'street' => $request->street,
+            'birth_date' => $request->birth_date,
+            'birth_place' => $request->birth_place,
+            'citizenship' => $request->citizenship,
+            'religion' => $request->religion,
+            'gender' => $request->gender,
+            'civil_status' => $request->civil_status,
+            'cell_no' => $request->cell_no,
+            'email' => $request->email,
+            'father' => $request->father,
+            'father_address' => $request->father_address,
+            'father_cell_no' => $request->father_cell_no,
+            'mother' => $request->mother,
+            'mother_address' => $request->mother_address,
+            'mother_cell_no' => $request->mother_cell_no,
+            'guardian' => $request->guardian,
+            'guardian_address' => $request->guardian_address,
+            'guardian_cell_no' => $request->guardian_cell_no,
+            'elem' => $request->elem,
+            'elem_address' => $request->elem_address,
+            'elem_grad_yr' => $request->elem_grad_yr,
+            'jhs' => $request->jhs,
+            'jhs_address' => $request->jhs_address,
+            'jhs_grad_yr' => $request->jhs_grad_yr,
+            'shs' => $request->shs,
+            'shs_address' => $request->shs_address,
+            'shs_grad_yr' => $request->shs_grad_yr,
+            'shs_hs_card' => $request->shs_hs_card,
+            'good_moral' => $request->good_moral,
+            'birth_cert' => $request->birth_cert,
+            'pic_2x2' => $request->pic_2x2,
+            'entrance_exam_res' => $request->entrance_exam_res,
+            'phys_test_res' => $request->phys_test_res,
+            'prev_univ' => 'not_applicable',
+            'prev_univ_grad_yr' => 'not_applicable',
+            'user_id' => $request->user()->id
+        ]);
 
+        // TODO: redirect to this
+        return to_route('dashboard');
     }
 
     /**

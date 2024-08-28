@@ -13,8 +13,8 @@
     <x-input-error :messages="$errors->get('birth_cert')" class="-mt-3 mb-2" />
 
     <label class="input-label" for="2x2-pic">2x2 Picture (2pcs., White Background)</label>
-    <input class="input-field-d" type="file" name="2x2_pic" id="2x2-pic">
-    <x-input-error :messages="$errors->get('2x2_pic')" class="-mt-3 mb-2" />
+    <input class="input-field-d" type="file" name="pic_2x2" id="2x2-pic">
+    <x-input-error :messages="$errors->get('pic_2x2')" class="-mt-3 mb-2" />
 
     <label class="input-label" for="entrance-exam-res">Entrance Exam Result</label>
     <input class="input-field-d" type="file" name="entrance_exam_res" id="entrance-exam-res">

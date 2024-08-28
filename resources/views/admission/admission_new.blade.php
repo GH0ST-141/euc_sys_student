@@ -21,7 +21,6 @@
         <div>
             @include('admission.partials.header')
 
-            {{-- //TODO: Add action to this form --}}
             {{-- <h3 id="form-title">Student Information</h3> --}}
             <form class="admission-form" method="POST" action="{{ route('admission_new.store') }}" enctype="multipart/form-data">
                 @csrf
@@ -50,7 +49,8 @@
 
                 </div>
 
-                <button id="submit-btn" type="submit" class="mb-8">Proceed</button>
+                @include('admission.partials.collection_agreement')
+                <button id="submit-btn" type="submit" class="mb-8">Submit</button>
 
             </form>
         </div>

@@ -27,7 +27,7 @@
 </div>
 <div class="flex flex-col mb-3 col-md-6">
     <label for="street-text" class="form-label input-label">Street (Optional)</label>
-    <input type="text" class="form-control form-control-md input-field" name="street" id="street-text">
+    <input value="{{ old('street') }}" type="text" class="form-control form-control-md input-field" name="street" id="street-text">
     <x-input-error :messages="$errors->get('street')" class="-mt-3 mb-2" />
 </div>
 {{-- !ADDRESS SELECTOR --}}

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Model;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+
+        // REVIEW: This will throw an error when an attribute is filled and is not in the fillable (in model)
+        /** @var \Illuminate\Foundation\Application $app */
+        $app = $this->app;
+        Model::preventSilentlyDiscardingAttributes(! $app->isProduction());
     }
 }

@@ -28,18 +28,18 @@ return new class extends Migration
             $table->string('religion');
             $table->string('gender');
             $table->string('civil_status');
-            $table->integer('cell_no');
+            $table->string('cell_no');
             $table->string('email');
             // Family BG
             $table->string('father');
             $table->string('father_address');
-            $table->integer('father_cell_no');
+            $table->string('father_cell_no');
             $table->string('mother');
             $table->string('mother_address');
-            $table->integer('mother_cell_no');
+            $table->string('mother_cell_no');
             $table->string('guardian');
             $table->string('guardian_address');
-            $table->integer('guardian_cell_no');
+            $table->string('guardian_cell_no');
             // Educ BG
             $table->string('elem');
             $table->string('elem_address');
@@ -56,7 +56,7 @@ return new class extends Migration
             $table->binary('shs_hs_card')->nullable();
             $table->binary('good_moral')->nullable();
             $table->binary('birth_cert')->nullable();
-            $table->binary('2x2_pic')->nullable();
+            $table->binary('pic_2x2')->nullable();
             $table->binary('entrance_exam_res')->nullable();
             $table->binary('phys_test_res')->nullable();
             $table->binary('tor')->nullable();
