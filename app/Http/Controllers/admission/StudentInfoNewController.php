@@ -117,7 +117,9 @@ class StudentInfoNewController extends Controller
             'user_id' => $request->user()->id
         ]);
 
-        // TODO: redirect to this
+        // TODO: One admission per, account;
+        // TODO: create custom middleware
+
         return to_route('dashboard');
     }
 
