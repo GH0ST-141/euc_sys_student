@@ -62,7 +62,8 @@ return new class extends Migration
             $table->binary('transfer_cred')->nullable();
             // Course and foreign keys
             $table->foreignUuid('course_id')->references('id')->on('courses');
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->bigInteger('user_id')->unsigned()->unique();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

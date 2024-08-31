@@ -120,6 +120,8 @@ class StudentInfoNewController extends Controller
         // TODO: One admission per, account;
         // TODO: create custom middleware
 
+        // dd($student_info);
+
         return to_route('dashboard');
     }
 

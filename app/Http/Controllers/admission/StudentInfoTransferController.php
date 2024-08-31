@@ -70,8 +70,6 @@ class StudentInfoTransferController extends Controller
             'phys_test_res' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
         ]);
 
-        // FIXME: The image credentials doesn't work, 'must be an image'
-        // added enctype already
         $student_info = StudentInfo::create([
             'last_name' => $request->last_name,
             'first_name' => $request->first_name,
@@ -118,7 +116,6 @@ class StudentInfoTransferController extends Controller
             'user_id' => $request->user()->id
         ]);
 
-        // TODO: redirect to this
         return to_route('dashboard');
     }
 

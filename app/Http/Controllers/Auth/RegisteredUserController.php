@@ -53,8 +53,5 @@ class RegisteredUserController extends Controller
         } else {
             return redirect(route('admission_transfer', absolute: false));
         }
-
-        // TODO: redirect to admission form for new or transferee (depending on the radio button value)
-        // return redirect(route('dashboard', absolute: false));
     }
 }

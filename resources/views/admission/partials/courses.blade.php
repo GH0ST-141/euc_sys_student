@@ -1,5 +1,4 @@
 <label class="input-label" for="suffix"> Course </label>
-<!-- TODO Add more options -->
 <select name="course_id" id="course-select" class="input-field-d">
     <option value="" disabled selected>Select Course</option>
     <option value="BSCS">
