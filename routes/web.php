@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admission\StudentInfoNewController;
+use App\Http\Controllers\admission\StudentInfoTransferController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('admission_new');
 
     Route::post('/admission_new', [StudentInfoNewController::class,'store'])->name('admission_new.store');
+
+    Route::get('/admission_transfer', function () {
+        return view('admission.admission_transferee');
+    })->name('admission_transfer');
+
+    Route::post('/admission_transfer', [StudentInfoTransferController::class,'store'])->name('admission_transfer.store');
 
     // REVIEW: For testing
     Route::get('/test',function () {

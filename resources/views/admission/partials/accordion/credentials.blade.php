@@ -1,5 +1,4 @@
 <div class="flex flex-col p-4 ">
-
     <label class="input-label" for="shs-hs-card">Original Copy of Senior/Junior High Card</label>
     <input class="input-field-d" type="file" name="shs_hs_card" id="shs-hs-card">
     <x-input-error :messages="$errors->get('shs_hs_card')" class="-mt-3 mb-2" />

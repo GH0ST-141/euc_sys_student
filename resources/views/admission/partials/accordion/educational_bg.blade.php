@@ -38,4 +38,6 @@
     <label class="input-label" for="jhs-grad-yr">Senior High Year Graduated</label>
     <input value="{{ old('shs_grad_yr') }}" type="number" name="shs_grad_yr" id="shs-grad-yr" class="yearpicker form-control input-field-d" value="" required />
     <x-input-error :messages="$errors->get('shs_grad_yr')" class="-mt-3 mb-2" />
+
+
 </div>

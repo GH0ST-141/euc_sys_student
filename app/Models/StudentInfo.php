@@ -65,9 +65,10 @@ class StudentInfo extends Model
         'pic_2x2',
         'entrance_exam_res',
         'phys_test_res',
+        'tor',
+        'transfer_cred',
         // To avoid error since prev_univ is not nullable
         'prev_univ',
-        'prev_univ_grad_yr',
         'user_id'
     ];
 

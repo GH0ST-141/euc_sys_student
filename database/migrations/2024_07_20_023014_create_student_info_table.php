@@ -51,7 +51,6 @@ return new class extends Migration
             $table->string('shs_address');
             $table->string('shs_grad_yr');
             $table->string('prev_univ');
-            $table->string('prev_univ_grad_yr');
             // Credentials
             $table->binary('shs_hs_card')->nullable();
             $table->binary('good_moral')->nullable();

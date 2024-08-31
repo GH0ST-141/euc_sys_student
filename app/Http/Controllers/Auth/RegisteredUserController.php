@@ -51,7 +51,7 @@ class RegisteredUserController extends Controller
         if ($request->is_transferee == 0) {
             return redirect(route('admission_new', absolute: false));
         } else {
-            return redirect(route('admission_transferee', absolute: false));
+            return redirect(route('admission_transfer', absolute: false));
         }
 
         // TODO: redirect to admission form for new or transferee (depending on the radio button value)

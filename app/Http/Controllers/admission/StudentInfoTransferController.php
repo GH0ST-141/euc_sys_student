@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 // TODO: Only one admission form per account, use the 'filled_admission' after successful submission.
-// REVIEW: Controller for Admission New Student
-class StudentInfoNewController extends Controller
+// REVIEW: Controller for Admission Transfer Student
+class StudentInfoTransferController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -60,6 +60,7 @@ class StudentInfoNewController extends Controller
             'shs' => ['required','string','min:8','max:255'],
             'shs_address' => ['required','string','max:255'],
             'shs_grad_yr' => ['required','digits:4','numeric'],
+            'prev_univ' => ['required','string','min:8','max:255'],
             // REVIEW: Max 8000kb or 8mb image size
             'shs_hs_card' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
             'good_moral' => ['nullable','image','mimes:jpg,jpeg,png','max:8192'],
@@ -113,7 +114,7 @@ class StudentInfoNewController extends Controller
             'pic_2x2' => $request->pic_2x2,
             'entrance_exam_res' => $request->entrance_exam_res,
             'phys_test_res' => $request->phys_test_res,
-            'prev_univ' => 'not_applicable',
+            'prev_univ' => $request->prev_univ,
             'user_id' => $request->user()->id
         ]);
 
